@@ -47,9 +47,10 @@ body {
   border-color: black;
   min-width: 322px;
   width: calc(100% - 10px);
-  min-height: 500px;
+  /*min-height: 500px;*/
   height: calc(100% - 10px);
   position: absolute;
+  overflow: hidden;
 }
 
 /*  START OF --- three main panes */
@@ -322,6 +323,10 @@ body {
 /* END OF --- Side Pane*/
 
 @media only screen and (max-width: 560px) {
+  .scientific-key-vertical{
+    display: none;
+  }
+  
   .calculator-pane {
     width: 100%;
     min-width: 317px;
@@ -343,6 +348,10 @@ body {
 }
 
 @media only screen and (min-width: 561px) and (max-width: 750px) {
+  .scientific-key-vertical{
+    display: none;
+  }
+
   .calculator-pane {
     width: 57%;
   }
@@ -366,6 +375,47 @@ body {
 }
 
 @media only screen and (min-width: 751px) {
+  .scientific-key-vertical{
+    display: none;
+  }
+
+  .calculator-pane {
+    width: calc(100% - 325px);
+  }
+
+  .side-pane {
+    width: 325px;
+  }
+
+  .history-button {
+    display: none;
+  }
+
+  .left-oriented-memo-button {
+    width: 20%;
+    max-width: 74px;
+  }
+
+  .right-oriented-memo-button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (min-height: 601px)  {
+  .scientific-key-horizontal{
+    display: none;
+  }
+
+  .scientific-key-vertical{
+    display: flex;
+  }
+
+  .num-pad {
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .calculator-pane {
     width: calc(100% - 325px);
   }
