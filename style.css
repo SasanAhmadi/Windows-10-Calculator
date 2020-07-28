@@ -47,7 +47,7 @@ body {
   border-color: black;
   min-width: 322px;
   width: calc(100% - 10px);
-  /*min-height: 500px;*/
+  min-height: 500px;
   height: calc(100% - 10px);
   position: absolute;
   overflow: hidden;
